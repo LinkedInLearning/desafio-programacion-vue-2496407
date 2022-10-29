@@ -61,6 +61,13 @@
             </div>
           </div>
 
+          <div class="mb-3 row">
+            <label for="n-audiencia" class="col-sm-2 col-form-label">Audicencia esperada</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="n-audiencia">
+            </div>
+          </div>
+
           <div class="row">
             <h3>Fechas de Evento</h3>
           </div>
