@@ -26,7 +26,7 @@
   </nav>
 
   <PerfilUsuario
-    v-for="perfil in listaOrdenada"
+    v-for="perfil in perfiles"
     :perfil="perfil"
     v-bind:key="perfil.id"
   />
