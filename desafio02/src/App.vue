@@ -10,30 +10,28 @@
   <div ref="figura" id="circulo"></div>
 </template>
 
-<script>
-
+<script setup>
 import gsap from 'gsap'
+import { onMounted, ref } from 'vue'
 
-export default {
-  name: 'SaltarCorrer',
-  methods:{
-    correr(){
-      gsap.killTweensOf(this.$refs.figura);
-      gsap.set(this.$refs.figura, {x: 0, y: window.innerHeight / 2});
-      gsap.to(this.$refs.figura,
+const figura = ref(null)
+
+const correr = () => {
+      gsap.killTweensOf(figura);
+      gsap.set(figura.value, {x: 0, y: window.innerHeight / 2});
+      gsap.to(figura.value,
       {x: window.innerWidth, duration: 5, repeat: -1});
-    },
-    saltar(){
+}
+
+const saltar = () => {
       gsap.killTweensOf(this.$refs.figura);
-      gsap.set(this.$refs.figura, {x: window.innerWidth / 2, y: window.innerHeight - 400});
-      gsap.to(this.$refs.figura,
+      gsap.set(figura.value, {x: window.innerWidth / 2, y: window.innerHeight - 400});
+      gsap.to(figura.value,
       {y: 0, duration: 2, repeat: -1, yoyo: true});
     }
-  },
-  mounted(){
-    this.saltar();
-  },
-}
+
+onMounted(()=> correr());
+
 </script>
 
 <style>
