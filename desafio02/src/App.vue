@@ -2,12 +2,12 @@
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary" @click="() => tipoAnimacion = 'saltar'">Saltar</button>
-        <button type="button" class="btn btn-secondary" @click="() => tipoAnimacion = 'correr'">Correr</button>
+        <button type="button" class="btn btn-primary">Saltar</button>
+        <button type="button" class="btn btn-secondary">Correr</button>
       </div>
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary" @click="() => velocidad -= 0.2">Aumentar velocidad</button>
-        <button type="button" class="btn btn-secondary" @click="() => velocidad += 0.2">Disminuir velocidad</button>
+        <button type="button" class="btn btn-primary">Aumentar velocidad</button>
+        <button type="button" class="btn btn-secondary">Disminuir velocidad</button>
       </div>
     </div>
   </nav>
@@ -16,11 +16,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import FiguraCuadrado from './components/FiguraCuadrado';
 
-const tipoAnimacion = ref('saltar');
-const velocidad = ref(5);
+import FiguraCuadrado from './components/FiguraCuadrado';
 
 </script>
 
