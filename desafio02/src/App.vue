@@ -17,14 +17,14 @@ import { onMounted, ref } from 'vue'
 const figura = ref(null)
 
 const correr = () => {
-      gsap.killTweensOf(figura);
+      gsap.killTweensOf(figura.value);
       gsap.set(figura.value, {x: 0, y: window.innerHeight / 2});
       gsap.to(figura.value,
       {x: window.innerWidth, duration: 5, repeat: -1});
 }
 
 const saltar = () => {
-      gsap.killTweensOf(this.$refs.figura);
+      gsap.killTweensOf(figura.value);
       gsap.set(figura.value, {x: window.innerWidth / 2, y: window.innerHeight - 400});
       gsap.to(figura.value,
       {y: 0, duration: 2, repeat: -1, yoyo: true});
