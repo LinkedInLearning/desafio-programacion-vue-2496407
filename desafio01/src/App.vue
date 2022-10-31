@@ -13,7 +13,7 @@
           <h2>Agrega más pendientes</h2>
           <div class="row">
             <div class="col">
-              <input class="form-control" type="text" placeholder="Hacer la cena..." ref="textoTarea"/>
+              <input class="form-control" type="text" placeholder="Hacer la cena..." v-model="valorTexto"/>
             </div>
             <div class="col">
               <button type="button" class="btn btn-primary" @click="agregarTarea">Agregar a lista</button>
@@ -28,15 +28,16 @@
 export default {
   name: 'ListaPendientes',
   data: ()=> ({
-    pendientes: ['Hacer la cena']
+    pendientes: [],
+    valorTexto: ''
   }),
   methods: {
     removerTarea(index){
       this.pendientes.splice(index, 1);
     },
     agregarTarea(){
-      this.pendientes.push(this.$refs.textoTarea.value);
-      this.$refs.textoTarea.value = '';
+      this.pendientes.push(this.valorTexto);
+      this.valorTexto = '';
     }
   }
 }
