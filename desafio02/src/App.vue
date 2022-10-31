@@ -1,7 +1,7 @@
 <template>
   <div class="row mt-5 ml-5">
     <div class="col">
-      <div class="btn-group" role="group" aria-label="Basic example">
+      <div class="btn-group" role="group">
         <button type="button" class="btn btn-primary" @click="saltar">Saltar</button>
         <button type="button" class="btn btn-secondary" @click="correr">Correr</button>
       </div>
