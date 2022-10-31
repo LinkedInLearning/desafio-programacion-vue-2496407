@@ -2,8 +2,8 @@
   <div class="row mt-5 ml-5">
     <div class="col">
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary" @click="saltar">Saltar</button>
-        <button type="button" class="btn btn-secondary" @click="correr">Correr</button>
+        <button type="button" class="btn btn-primary">Saltar</button>
+        <button type="button" class="btn btn-secondary">Correr</button>
       </div>
     </div>
   </div>
@@ -11,26 +11,6 @@
 </template>
 
 <script setup>
-import gsap from 'gsap'
-import { onMounted, ref } from 'vue'
-
-const figura = ref(null)
-
-const correr = () => {
-      gsap.killTweensOf(figura.value);
-      gsap.set(figura.value, {x: 0, y: window.innerHeight / 2});
-      gsap.to(figura.value,
-      {x: window.innerWidth, duration: 5, repeat: -1});
-}
-
-const saltar = () => {
-      gsap.killTweensOf(figura.value);
-      gsap.set(figura.value, {x: window.innerWidth / 2, y: window.innerHeight - 400});
-      gsap.to(figura.value,
-      {y: 0, duration: 2, repeat: -1, yoyo: true});
-    }
-
-onMounted(()=> correr());
 
 </script>
 
