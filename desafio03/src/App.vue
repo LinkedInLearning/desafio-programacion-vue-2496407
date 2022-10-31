@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import PerfilUsuario from './components/PerfilUsuario.vue'
+import PerfilUsuario from './components/PerfilUsuario'
 import perfiles from './assets/usuarios.json'
 </script>
 
