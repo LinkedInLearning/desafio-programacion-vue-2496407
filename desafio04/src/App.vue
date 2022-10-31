@@ -33,7 +33,6 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
 import PerfilUsuario from './components/PerfilUsuario.vue'
 import perfiles from './assets/usuarios.json'
 
