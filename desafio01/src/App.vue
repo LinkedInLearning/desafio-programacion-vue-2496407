@@ -2,10 +2,10 @@
   <div class="container">
     <h1 class="py-3">Lista de pendientes</h1>
         <ul class="list-group mb-3">
-          <li class="list-group-item" v-for="(item, index) in pendientes" v-bind:key="index">
+          <li class="list-group-item">
             <div class="row">
-              <div class="col">{{item}}</div>
-              <div class="col"><button type="button" class="btn btn-secondary btn-sm" @click="removerTarea(index)">Hecho!</button></div>
+              <div class="col"></div>
+              <div class="col"><button type="button" class="btn btn-secondary btn-sm">Hecho!</button></div>
             </div>
           </li>
         </ul>
@@ -13,10 +13,10 @@
           <h2>Agrega más pendientes</h2>
           <div class="row">
             <div class="col">
-              <input class="form-control" type="text" placeholder="Hacer la cena..." ref="textoTarea"/>
+              <input class="form-control" type="text" placeholder="Hacer la cena..."/>
             </div>
             <div class="col">
-              <button type="button" class="btn btn-primary" @click="agregarTarea">Agregar a lista</button>
+              <button type="button" class="btn btn-primary">Agregar a lista</button>
             </div>
           </div>
         </div>
@@ -27,18 +27,8 @@
 
 export default {
   name: 'ListaPendientes',
-  data: ()=> ({
-    pendientes: ['Hacer la cena']
-  }),
-  methods: {
-    removerTarea(index){
-      this.pendientes.splice(index, 1);
-    },
-    agregarTarea(){
-      this.pendientes.push(this.$refs.textoTarea.value);
-      this.$refs.textoTarea.value = '';
-    }
-  }
+  data: ()=> ({}),
+  methods: {}
 }
 </script>
 
