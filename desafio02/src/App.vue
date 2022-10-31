@@ -1,16 +1,26 @@
 <template>
-  <div class="row mt-5 ml-5">
-    <div class="col">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
       <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary">Saltar</button>
-        <button type="button" class="btn btn-secondary">Correr</button>
+        <button type="button" class="btn btn-primary" @click="() => tipoAnimacion = 'saltar'">Saltar</button>
+        <button type="button" class="btn btn-secondary" @click="() => tipoAnimacion = 'correr'">Correr</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-primary" @click="() => velocidad -= 0.2">Aumentar velocidad</button>
+        <button type="button" class="btn btn-secondary" @click="() => velocidad += 0.2">Disminuir velocidad</button>
       </div>
     </div>
-  </div>
-  <div ref="figura" id="circulo"></div>
+  </nav>
+
+  <FiguraCuadrado :movimiento="tipoAnimacion" :velocidad="velocidad" />
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import FiguraCuadrado from './components/FiguraCuadrado';
+
+const tipoAnimacion = ref('saltar');
+const velocidad = ref(5);
 
 </script>
 
@@ -20,15 +30,5 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-}
-#circulo{
-  width: 100px;
-  height: 100px;
-  background-color: aqua;
-  border-radius: 100px;
-  border: dotted 5px #2c3e50;
-  position: absolute;
-  top: 300px;
-  left: 10px;
 }
 </style>
