@@ -157,7 +157,7 @@ const presupuestoValido = computed(() => {
   if (!blur.presupuesto) {
     return true;
   }
-  return presupuesto.value !== null
+  return presupuesto.value !== null && presupuesto.value > 0
 });
 
 const numeroAudiencia = ref(null);
@@ -165,23 +165,27 @@ const numAudienciaValido = computed(() => {
   if (!blur.numeroAudiencia) {
     return true;
   }
-  return numeroAudiencia.value !== null
+  return numeroAudiencia.value !== null && numeroAudiencia.value > 0
 });
 
 const fechaInicio = ref(null);
 const fechaFin = ref(null);
 const fechasValidas = computed(() => {
-  if (!blur.fechaInicio || !blur.fechaFin) {
+  if (!blur.fechaInicio && !blur.fechaFin) {
     return true;
   }
   return moment(fechaInicio.value).isBefore(moment(fechaFin.value));
 });
 
-const activarBoton = computed(() => (blur.nombre && nombreValido &&
-  blur.tipoEvento && tipoEventoValido &&
-  blur.tipoAudiencia && tipoAudienciaValido &&
-  blur.presupuesto && presupuestoValido &&
-  blur.numeroAudiencia && numAudienciaValido)
+
+const activarBoton = computed(() => (
+  blur.nombre && nombreValido.value &&
+  blur.tipoEvento && tipoEventoValido.value &&
+  blur.tipoAudiencia && tipoAudienciaValido.value &&
+  blur.presupuesto && presupuestoValido.value &&
+  blur.numeroAudiencia && numAudienciaValido.value &&
+  blur.fechaInicio && blur.fechaFin && fechasValidas.value
+  )
 );
 
 </script>
