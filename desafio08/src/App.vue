@@ -1,16 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div class="dropdown mb-5">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Canciones
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#" @click="cargarArchivoCancion('./letras/la_pajara_pinta.json')">Paraja Pinta</a></li>
+    <li><a class="dropdown-item" href="#" @click="cargarArchivoCancion('./letras/los_pollitos.json')">Los Pollitos</a></li>
+  </ul>
+</div>
+  <LetraCancion :cancion="cancion"/>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import { ref } from 'vue'
+import LetraCancion from './components/LetraCancion'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+const cancion = ref(null);
+
+const cargarArchivoCancion = (url) =>{
+  fetch(url).
+  then(respuesta => respuesta.json()).
+  then(datos => cancion.value = datos);
 }
 </script>
 
