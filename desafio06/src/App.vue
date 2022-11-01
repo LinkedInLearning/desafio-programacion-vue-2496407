@@ -12,16 +12,22 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
+import _ from 'lodash'
 import PerfilUsuario from './components/PerfilUsuario.vue'
 import perfiles from './assets/usuarios.json'
 
 const busqueda = ref('');
+const busquedaDebounced = ref('');
+
+const debounceBusqueda = _.debounce(() => busquedaDebounced.value = busqueda.value, 100)
+
+watch(() => busqueda.value, debounceBusqueda, {immediate: true});
 
 const listaFiltrada = computed(() => {
   return perfiles.filter(perfil => {
     
-    const regex = new RegExp(busqueda.value, 'i');
+    const regex = new RegExp(busquedaDebounced.value, 'i');
     
     const email = perfil.email.search(regex) > -1;
     const usuario = perfil.usuario.search(regex) > -1;
