@@ -1,6 +1,5 @@
 <template>
-  <Teleport to="body">
-    <div class="modal fade" v-bind:id="targetId" tabindex="-1" aria-labelledby="ejemploDialogo" aria-hidden="true">
+    <div class="modal fade" tabindex="-1" aria-labelledby="ejemploDialogo" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -17,15 +16,12 @@
       </div>
     </div>
   </div>
-</Teleport>
 </template>
 
 <script>
 export default {
   name: 'VentanaDialogo',
-  props: {
-    targetId: String
-  }
+  props: {}
 }
 </script>
 

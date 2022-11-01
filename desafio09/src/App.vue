@@ -2,7 +2,7 @@
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miCuandroDialogo">
     Abrir cuandro de diálogo
   </button>
-  <VentanaDialogo target-id="miCuandroDialogo"/>
+  <VentanaDialogo/>
 </template>
 
 <script>
