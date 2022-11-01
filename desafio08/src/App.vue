@@ -4,24 +4,16 @@
     Canciones
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#" @click="cargarArchivoCancion('./letras/la_pajara_pinta.json')">Paraja Pinta</a></li>
-    <li><a class="dropdown-item" href="#" @click="cargarArchivoCancion('./letras/los_pollitos.json')">Los Pollitos</a></li>
+    <li><a class="dropdown-item" href="#">Paraja Pinta</a></li>
+    <li><a class="dropdown-item" href="#">Los Pollitos</a></li>
   </ul>
 </div>
-  <LetraCancion :cancion="cancion"/>
+  <LetraCancion/>
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import LetraCancion from './components/LetraCancion'
 
-const cancion = ref(null);
-
-const cargarArchivoCancion = (url) =>{
-  fetch(url).
-  then(respuesta => respuesta.json()).
-  then(datos => cancion.value = datos);
-}
 </script>
 
 <style>
