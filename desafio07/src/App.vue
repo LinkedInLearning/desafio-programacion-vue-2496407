@@ -10,12 +10,16 @@
       @drop="drop"
     ></div>
   </div>
-  <div class="dragable" @dragstart.self="dragStart" draggable="true" id="item"></div>
+  <div class="dragable" @dragstart.self="dragStart" draggable="true" ref="caja"></div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
+const caja = ref(null)
+
 const dragStart = (e)=>{
-  e.dataTransfer.setData('text/plain', e.target.id);
+  e.dataTransfer.setData('text/plain', caja.value.id);
 }
 
 const dragOverHandling = (e) => {
@@ -29,14 +33,8 @@ const dragLeave = (e)=>{
 }
 
 const drop = (e) => {
-
     e.target.classList.remove('drop-over');
-
-    const id = e.dataTransfer.getData('text/plain');
-    const draggable = document.getElementById(id);
-
-    e.target.appendChild(draggable);
-
+    e.target.appendChild(caja.value);
 }
 
 </script>
@@ -46,7 +44,7 @@ const drop = (e) => {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 .dragable{
-  width: 100px;
+  width: 75px;
   height: 100px;
   background-color: coral;
   border-radius: 5px;
