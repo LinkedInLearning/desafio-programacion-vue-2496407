@@ -5,7 +5,7 @@
         <RuedaGira :velocidad="velocidad" :direccion="direccion1"/>
       </div>
       <div class="col-2">
-        <RuedaGira :velocidad="velocidad" :direccion="direccion2"/>
+        <RuedaGira :velocidad="velocidadContraria" :direccion="direccion2"/>
       </div>
     </div>
 
@@ -22,11 +22,16 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import RuedaGira from './components/RuedaGira'
 
 const velocidad = ref(8);
+const velocidadContraria = ref(3);
 
+watch(() => velocidad.value,
+(_, valorAnterior) => velocidadContraria.value = (valorAnterior || 3) + 0.3,
+{immediate: true});
+ 
 const direccion1 = ref('derecha');
 const direccion2 = ref('izquierda');
 
