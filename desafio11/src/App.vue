@@ -2,18 +2,11 @@
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miCuandroDialogo">
     Abrir cuandro de diálogo
   </button>
-  <VentanaDialogo target-id="miCuandroDialogo">
-    <template v-slot:footer>
-      <button type="button" class="btn btn-primary btn-lg">Aceptar</button>
-    </template>
-    <template v-slot:header>
-      <h3>Cabecera del diálogo</h3>
-    </template>
-    <template v-slot:body>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id dolor diam. Fusce sem augue, consequat quis
-        sapien vitae, ultrices imperdiet eros. Vivamus posuere dui eget auctor vestibulum. Curabitur tincidunt eros
-        turpis, sed convallis leo convallis venenatis.</p>
-    </template>
+  <VentanaDialogo target-id="miCuandroDialogo"
+  header="Prueba header"
+  body="Prueba body"
+  footer="Prueba footer"
+  >
   </VentanaDialogo>
 </template>
 

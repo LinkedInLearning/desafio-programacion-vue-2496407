@@ -4,14 +4,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <slot name="header"></slot>
+          <h3>{{header}}</h3>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <slot name="body"></slot>
+          <p>{{body}}</p>
         </div>
         <div class="modal-footer">
-          <slot name="footer"></slot>
+          <span>{{footer}}</span>
         </div>
       </div>
     </div>
@@ -24,6 +24,9 @@ export default {
   name: 'VentanaDialogo',
   props: {
     targetId: String,
+    header: String,
+    body: String,
+    footer: String,
   }
 }
 </script>
