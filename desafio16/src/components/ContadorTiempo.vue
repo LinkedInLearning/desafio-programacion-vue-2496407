@@ -1,5 +1,5 @@
 <template>                                                                                          
-  <slot :tiempoActual="tiempoActual"></slot>                                                                  
+                                                              
 </template>                                                                                         
 
 <script setup>                                                                                      
