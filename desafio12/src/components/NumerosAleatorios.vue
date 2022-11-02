@@ -7,30 +7,11 @@
 </template>
 
 <script setup>
-import { ref, defineProps, watch, defineEmits } from 'vue'
-import { generarAleatorio } from '../utils'
+import { ref } from 'vue'
 
 const uno = ref('');
 const dos = ref('');
 const tres = ref('');
-
-const numeroRandom = () => generarAleatorio(1, 3);
-
-const emit = defineEmits('ganador');
-
-const props = defineProps({
-  generarAleatorio: Number
-})
-
-watch(() => props.generarAleatorio, () => {
-  uno.value = numeroRandom();
-  dos.value = numeroRandom();
-  tres.value = numeroRandom();
-
-  if(uno.value === dos.value && tres.value === dos.value){
-    emit('ganador')
-  }
-})
 
 </script>
 
