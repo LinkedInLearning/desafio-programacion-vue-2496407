@@ -23,7 +23,7 @@
 export default {
   name: 'VentanaDialogo',
   props: {
-    targetId: String
+    targetId: String,
   }
 }
 </script>

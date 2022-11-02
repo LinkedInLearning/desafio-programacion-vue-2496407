@@ -3,6 +3,9 @@
     Abrir cuandro de diálogo
   </button>
   <VentanaDialogo target-id="miCuandroDialogo">
+    <template v-slot:footer>
+      <button type="button" class="btn btn-primary btn-lg">Aceptar</button>
+    </template>
     <template v-slot:header>
       <h3>Cabecera del diálogo</h3>
     </template>
@@ -10,9 +13,6 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id dolor diam. Fusce sem augue, consequat quis
         sapien vitae, ultrices imperdiet eros. Vivamus posuere dui eget auctor vestibulum. Curabitur tincidunt eros
         turpis, sed convallis leo convallis venenatis.</p>
-    </template>
-    <template v-slot:footer>
-      <button type="button" class="btn btn-primary btn-lg">Aceptar</button>
     </template>
   </VentanaDialogo>
 </template>
