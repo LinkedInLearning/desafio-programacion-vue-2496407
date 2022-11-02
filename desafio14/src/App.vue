@@ -1,5 +1,4 @@
 <template>
-  <jsxNode></jsxNode>
 </template>
 <script lang="jsx" setup>
 
@@ -13,18 +12,5 @@ const imagenes = [
   './imagenes/imagen5.jpg',
   './imagenes/imagen6.jpg',
 ];
-
-const jsxNode = () => {
-  return (
-    <div class="container">
-      <div class="row">
-        {imagenes.map(imagenUrl => (
-          <div class="col-4">
-            <ImagenGaleria src={imagenUrl} />
-          </div>
-        ))}
-      </div>
-    </div>);
-};
 
 </script>
