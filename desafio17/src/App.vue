@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <button type="button" class="btn btn-secondary"><router-link to="/">Lista de productos</router-link></button>
-        <button type="button" class="btn btn-secondary"><router-link to="/carrito">Carrito de compras {{store.getters.totalNumProductos}}</router-link></button>
+        <button type="button" class="btn btn-secondary" :disabled="store.getters.totalNumProductos === 0"><router-link to="/carrito">Carrito de compras {{store.getters.totalNumProductos}}</router-link></button>
       </div>
     </nav>
     <router-view />
