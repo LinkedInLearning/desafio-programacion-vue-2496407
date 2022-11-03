@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "nombre": "Aceite comestible",
+        "precio": 1300
+    },
+    {
+        "id": 2,
+        "nombre": "Aderezo",
+        "precio": 1000
+    },
+    {
+        "id": 3,
+        "nombre": "Consome",
+        "precio": 300
+    },
+    {
+        "id": 4,
+        "nombre": "Crema de cacahuate",
+        "precio": 500
+    },
+    {
+        "id": 5,
+        "nombre": "Crema para café",
+        "precio": 400
+    },
+    {
+        "id": 6,
+        "nombre": "Pure de tomate",
+        "precio": 300
+    },
+    {
+        "id": 7,
+        "nombre": "Alimento para bebé",
+        "precio": 1500
+    },
+    {
+        "id": 8,
+        "nombre": "Alimento para mascotas",
+        "precio": 1200
+    },
+    {
+        "id": 9,
+        "nombre": "Atole",
+        "precio": 900
+    },
+    {
+        "id": 1,
+        "nombre": "Avena",
+        "precio": 800
+    },
+    {
+        "id": 10,
+        "nombre": "Azúcar",
+        "precio": 500
+    },
+    {
+        "id": 11,
+        "nombre": "Café",
+        "precio": 500
+    },
+    {
+        "id": 12,
+        "nombre": "Cereales",
+        "precio": 1500
+    },
+    {
+        "id": 13,
+        "nombre": "Especias",
+        "precio": 500
+    },
+    {
+        "id": 14,
+        "nombre": "Flan en polvo",
+        "precio": 200
+    },
+    {
+        "id": 15,
+        "nombre": "Formula infantil",
+        "precio": 1300
+    },
+    {
+        "id": 16,
+        "nombre": "Gelatina en polvo",
+        "precio": 700
+    },
+    {
+        "id": 17,
+        "nombre": "Harina",
+        "precio": 800
+    },
+    {
+        "id": 18,
+        "nombre": "Sal",
+        "precio": 400
+    },
+    {
+        "id": 19,
+        "nombre": "Salsa envasada",
+        "precio": 450
+    },
+    {
+        "id": 20,
+        "nombre": "Sazonadores",
+        "precio": 350
+    },
+    {
+        "id": 21,
+        "nombre": "Sopas en sobre",
+        "precio": 250
+    },
+    {
+        "id": 22,
+        "nombre": "Cajeta",
+        "precio": 1000
+    },
+    {
+        "id": 23,
+        "nombre": "Mayonesa",
+        "precio": 720
+    },
+    {
+        "id": 24,
+        "nombre": "Mermelada",
+        "precio": 520
+    },
+    {
+        "id": 25,
+        "nombre": "Miel",
+        "precio": 400
+    },
+    {
+        "id": 26,
+        "nombre": "Te",
+        "precio": 500
+    },
+    {
+        "id": 27,
+        "nombre": "Vinagre",
+        "precio": 700
+    },
+    {
+        "id": 28,
+        "nombre": "Huevo",
+        "precio": 100
+    },
+    {
+        "id": 29,
+        "nombre": "Pastas",
+        "precio": 400
+    }
+]
