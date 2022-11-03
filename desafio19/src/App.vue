@@ -26,20 +26,6 @@ const animar = () => {
   });
 }
 
-watchEffect(() => {
-  gsap.to(circulo2.value, {
-    scale: escala.value + 0.5, duration: 1, delay: 1, onComplete: () => {
-      gsap.to(circulo2.value, { scale: 0, duration: 1, delay: 0.5 });
-    }
-  });
-
-  gsap.to(circulo3.value, {
-    scale: escala.value + 1, duration: 1, delay: 1, onComplete: () => {
-      gsap.to(circulo3.value, { scale: 0, duration: 1, delay: 0.5 });
-    }
-  });
-});
-
 onMounted(() => {
   animar();
 })
