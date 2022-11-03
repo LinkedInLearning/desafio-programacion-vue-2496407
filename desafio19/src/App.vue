@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watchEffect } from 'vue'
 import gsap from 'gsap'
 
 const circulo1 = ref();
@@ -13,32 +13,32 @@ const circulo2 = ref();
 const circulo3 = ref();
 const escala = ref();
 
-const generarAleatorio = (min, max) =>{
-    return Math.random() * (max - min + 1) + min
+const generarAleatorio = (min, max) => {
+  return Math.random() * (max - min + 1) + min
 }
 
-const animar = () =>{
+const animar = () => {
   escala.value = generarAleatorio(0.5, 2);
-  gsap.to(circulo1.value, { scale: escala.value, duration: 1, delay: 1, onComplete: () => {
-    gsap.to(circulo1.value, { scale: 0, duration: 1, delay: 0.5, onComplete: animar});
-  }});
+  gsap.to(circulo1.value, {
+    scale: escala.value, duration: 1, delay: 1, onComplete: () => {
+      gsap.to(circulo1.value, { scale: 0, duration: 1, delay: 0.5, onComplete: animar });
+    }
+  });
 }
 
-const animar2 = () => {
-  gsap.to(circulo2.value, { scale: escala.value + 0.5, duration: 1, delay: 1, onComplete: () => {
-    gsap.to(circulo2.value, { scale: 0, duration: 1, delay: 0.5});
-  }});
-}
+watchEffect(() => {
+  gsap.to(circulo2.value, {
+    scale: escala.value + 0.5, duration: 1, delay: 1, onComplete: () => {
+      gsap.to(circulo2.value, { scale: 0, duration: 1, delay: 0.5 });
+    }
+  });
 
-const animar3 = () => {
-  gsap.to(circulo3.value, { scale: escala.value + 1, duration: 1, delay: 1, onComplete: () => {
-    gsap.to(circulo3.value, { scale: 0, duration: 1, delay: 0.5});
-  }});
-}
-
-watch(escala, ()=> animar2());
-
-watch(escala, ()=> animar3());
+  gsap.to(circulo3.value, {
+    scale: escala.value + 1, duration: 1, delay: 1, onComplete: () => {
+      gsap.to(circulo3.value, { scale: 0, duration: 1, delay: 0.5 });
+    }
+  });
+});
 
 onMounted(() => {
   animar();
