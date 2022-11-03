@@ -21,6 +21,6 @@ const route = useRoute();
 const infoImagen = ref();
 
 onMounted(() => {
-  infoImagen.value = store.state.imagenes[parseInt(route.params.id)];
+  infoImagen.value = store.state.imagenes[??];
 })
 </script>

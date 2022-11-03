@@ -19,6 +19,6 @@ import { useRouter } from 'vue-router'
 const imagenes = useStore().state.imagenes;
 const router = useRouter();
 
-const irImagen = (index) => router.push({ name: 'imagen', params: { id: index } })
+const irImagen = (index) => ??
 
 </script>
