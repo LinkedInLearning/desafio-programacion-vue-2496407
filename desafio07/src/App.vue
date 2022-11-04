@@ -10,32 +10,10 @@
       @drop="drop"
     ></div>
   </div>
-  <div class="dragable" @dragstart.self="dragStart" draggable="true" ref="caja"></div>
+  <div class="dragable"></div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const caja = ref(null)
-
-const dragStart = (e)=>{
-  e.dataTransfer.setData('text/plain', caja.value.id);
-}
-
-const dragOverHandling = (e) => {
-    e.preventDefault();
-    e.target.classList.add('drop-hover');
-}
-
-const dragLeave = (e)=>{
-  e.preventDefault();
-  e.target.classList.remove('drop-hover');
-}
-
-const drop = (e) => {
-    e.target.classList.remove('drop-over');
-    e.target.appendChild(caja.value);
-}
 
 </script>
 
