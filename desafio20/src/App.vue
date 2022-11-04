@@ -3,14 +3,28 @@
     <div v-for="i in 24" v-bind:key="i" class="drop-area col-1" @dragenter.self="dragOverHandling"
       @dragover.self="dragOverHandling" @dragleave.self="dragLeave" @drop="drop"></div>
   </div>
-  <div id="dragable"></div>
+  <div class="row">
+    <div class="col">
+      <div id="dragable" class="dragable"></div>
+    </div>
+    <div class="col">
+      <div id="dragable2" class="dragable"></div>
+    </div>
+    <div class="col">
+      <div id="dragable3" class="dragable"></div>
+    </div>
+</div>
 </template>
 
 <script setup>
 import { onMounted } from 'vue';
 import { useDraggable } from './composable'
 
-onMounted(() => useDraggable('dragable'))
+onMounted(() => {
+  useDraggable('dragable2')
+  useDraggable('dragable')
+  useDraggable('dragable3')
+})
 
 const dragOverHandling = (e) => {
     e.preventDefault();
@@ -35,7 +49,7 @@ const dragOverHandling = (e) => {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
-#dragable {
+.dragable {
   width: 75px;
   height: 100px;
   background-color: coral;
