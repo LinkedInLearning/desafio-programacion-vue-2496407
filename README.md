@@ -2,7 +2,7 @@
 
 Este es el repositorio del curso de LinkedIn Learning `[Desafío de programación: Vue]`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
-![Nombre completo del curso][lil-thumbnail-url][Copy&Past Image from LiL-Buddy] 
+![image](https://user-images.githubusercontent.com/71371373/211594396-bf951301-b1e8-42e3-a3af-32c69adebc5d.png) 
 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
@@ -32,7 +32,7 @@ Las ramas están estructuradas para corresponder a los vídeos del curso y la co
 Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/natalia-corea).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com/learning/building-a-graphql-project-with-react-js
+[lil-course-url]: https://www.linkedin.com/learning/desafio-de-programacion-vue/ponte-al-mando-de-vue
 [lil-thumbnail-url]: https://cdn.lynda.com/course/2875095/2875095-1615224395432-16x9.jpg
 
 [1]: # (End of ES-Instruction ###############################################################################################)
