@@ -1,8 +1,8 @@
 # Desafío de programación: Vue
 
-Este es el repositorio del curso de LinkedIn Learning `[Desafío de programación: Vue]`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
+Este es el repositorio del curso de LinkedIn Learning `Desafío de programación: Vue`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
-![image](https://user-images.githubusercontent.com/71371373/211594396-bf951301-b1e8-42e3-a3af-32c69adebc5d.png) 
+![COURSENAME][lil-thumbnail-url] 
 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
@@ -33,6 +33,4 @@ Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.c
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 [lil-course-url]: https://www.linkedin.com/learning/desafio-de-programacion-vue/ponte-al-mando-de-vue
-[lil-thumbnail-url]: https://cdn.lynda.com/course/2875095/2875095-1615224395432-16x9.jpg
-
-[1]: # (End of ES-Instruction ###############################################################################################)
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/C4E0DAQGQNwDZEvq0Yw/learning-public-crop_675_1200/0/1673274892474?e=2147483647&v=beta&t=5YufkMMrv_WwOf6MyHEuMHuf4UyrI20Ng5fEp2cU1fw
